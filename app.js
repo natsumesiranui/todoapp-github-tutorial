@@ -4,3 +4,13 @@ $("#adTodo").click(function () {
 
     $("input").val("");
 });
+
+
+$(document).on("change","input[type=check]",function(){
+    if($(this).is(":checked")){
+        $(this).parent().css("text-decoration","line-through");
+    } else {
+        $(this).parent().css("text-decoration","none");
+    }
+
+});
